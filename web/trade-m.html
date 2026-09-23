@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<script>if(matchMedia('(min-width:761px)').matches&&window.top===window&&!/[?&]stay/.test(location.search))location.replace('trade.html'+location.hash);</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter+Tight:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#0B0C0E;-webkit-font-smoothing:antialiased;}
+  a{color:#A8A49D;text-decoration:none;border-bottom:1px solid #2A2F35;}
+  a:hover{color:#66D19A;border-color:#66D19A;}
+  @keyframes om-rise{from{opacity:0;transform:translateY(16px);}}
+  @keyframes om-clip{from{clip-path:inset(0 0 105% 0);}to{clip-path:inset(0 0 -12% 0);}}
+  @keyframes om-grow{from{transform:scaleX(0);}}
+  @keyframes om-inL{from{opacity:0;transform:translateX(-26px);}}
+  @keyframes om-inR{from{opacity:0;transform:translateX(26px);}}
+  @keyframes om-pulse{0%{transform:scale(1);opacity:.55;}100%{transform:scale(3);opacity:0;}}
+  @keyframes om-fade{from{opacity:0;}}
+  @keyframes om-flow{to{background-position:-24px 0;}}
+  @keyframes om-flow-s{to{background-position:-18px 0;}}
+  @keyframes om-flow-rev{to{background-position:24px 0;}}
+  @keyframes om-breathe{0%,100%{opacity:.35;}50%{opacity:1;}}
+</style>
+</helmet>
+
+<div style="background:#0B0C0E;padding:0 0 80px;font-family:'Inter Tight',-apple-system,'Segoe UI',sans-serif;color:#F2EEE7;line-height:1.5">
+
+  <div style="height:6px;background:linear-gradient(90deg,#66D19A 0%,#66D19A 44%,#DDAE62 44%,#DDAE62 62%,#2A2F35 62%,#2A2F35 100%);transform-origin:left;animation:om-grow 1.1s cubic-bezier(.16,1,.3,1) .05s both"></div>
+
+  <div style="max-width:440px;margin:0 auto;padding:18px 20px 0">
+
+    <div style="position:relative;z-index:2;display:flex;justify-content:flex-end;gap:6px;animation:om-fade .8s ease .3s both">
+      <button onClick="{{ setEn }}" style="{{ btnEn }}">EN</button>
+      <button onClick="{{ setEs }}" style="{{ btnEs }}">ES</button>
+    </div>
+
+    <div style="display:grid;grid-template-columns:minmax(0,1fr);gap:26px;align-items:end;padding:18px 0 28px;border-bottom:1px solid #2A2F35">
+      <div style="min-width:0">
+                <h1 style="font-family:'Bricolage Grotesque','Arial Black',sans-serif;font-weight:800;font-size:clamp(44px,13vw,60px);line-height:.86;letter-spacing:-.045em;text-transform:uppercase;margin-top:0">
+          <span style="display:block;animation:om-clip .9s cubic-bezier(.16,1,.3,1) .15s both">Alejandro</span>
+          <span style="display:block;color:#66D19A;animation:om-clip .9s cubic-bezier(.16,1,.3,1) .32s both">Brandez</span>
+          <span style="display:block;color:#6F6C66;animation:om-clip .9s cubic-bezier(.16,1,.3,1) .46s both">Aldaz</span>
+        </h1>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#A8A49D;margin-top:22px;animation:om-rise .7s ease .6s both">
+          <span hidden="{{ enOff }}">International Trade · Sourcing · Commercial Operations</span><span hidden="{{ esOff }}">Comercio Internacional · Compras · Operaciones Comerciales</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:18px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;font-weight:700;letter-spacing:.1em;animation:om-rise .7s ease .72s both">
+          <span style="background:#16321F;color:#66D19A;padding:6px 12px">CN</span>
+          <span style="background:#16321F;color:#66D19A;padding:6px 12px">EC</span>
+          <span style="background:#16321F;color:#66D19A;padding:6px 12px">+</span>
+          <span style="flex:0 0 74px;height:3px;background:repeating-linear-gradient(90deg,#66D19A 0 10px,transparent 10px 18px);background-size:18px 3px;animation:om-flow-s 1.1s linear infinite"></span>
+          <span style="background:#66D19A;color:#0B0C0E;padding:6px 12px">EU</span>
+          <span style="flex:1 1 100%;color:#8F8B84;font-size:10px;letter-spacing:.2em;margin-top:4px"><span hidden="{{ enOff }}">SOURCE · SHIP · CLEAR · SELL</span><span hidden="{{ esOff }}">COMPRAR · TRANSPORTAR · DESPACHAR · VENDER</span></span>
+        </div>
+      </div>
+      <div style="align-self:stretch;order:-1;display:flex;align-items:stretch;gap:16px;animation:om-fade .9s ease .5s both">
+        <div style="position:relative;flex:0 0 108px;aspect-ratio:17/21;border:1px solid #2A2F35;overflow:hidden;animation:om-clip 1s cubic-bezier(.16,1,.3,1) .4s both">
+          <img src="assets/photo.png" alt="Alejandro Brandez Aldaz" style="display:block;width:100%;height:100%;object-fit:cover;object-position:52% 30%">
+          <span style="position:absolute;left:0;right:0;bottom:0;height:3px;background:#66D19A"></span>
+        </div>
+        <div style="display:flex;flex-direction:column;justify-content:space-between;padding:2px 0 4px;font-family:'IBM Plex Mono',monospace;text-transform:uppercase">
+          <span style="font-size:10px;font-weight:700;letter-spacing:.3em;color:#66D19A">CV / 2026</span>
+          <span style="font-size:10px;font-weight:600;letter-spacing:.18em;color:#8F8B84;line-height:1.8">Valencia<br>ES / EU</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:8px;padding:22px 0 0;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:nowrap;color:#A8A49D;animation:om-rise .7s ease .8s both">
+      <a href="https://linkedin.com/in/alejandrobrandez">linkedin.com/in/alejandrobrandez</a>
+      <a href="https://avantiadigital.com">avantiadigital.com</a>
+      <a href="mailto:albrandez@gmail.com">albrandez@gmail.com</a>
+      <span>+34 667 028 405</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;padding:14px 0 0;margin-top:14px;border-top:1px solid #2A2F35;font-family:'IBM Plex Mono',monospace;font-size:11.5px;white-space:normal;color:#66D19A;animation:om-rise .7s ease .88s both">
+      <span>Valencia, Spain</span>
+      <span><span hidden="{{ enOff }}">Open to relocation</span><span hidden="{{ esOff }}">Disponible para reubicación</span></span>
+      <span><span hidden="{{ enOff }}">EU citizen · no permit needed</span><span hidden="{{ esOff }}">Ciudadano UE · sin permiso</span></span>
+    </div>
+
+    <div data-reveal style="margin-top:36px;border:1px solid #2A2F35;background:#111418">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;padding:16px 20px;border-bottom:1px solid #2A2F35;font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.24em;text-transform:uppercase">
+        <span><span hidden="{{ enOff }}">Two tracks, run at once</span><span hidden="{{ esOff }}">Dos carriles, a la vez</span></span>
+        <span style="color:#8F8B84">SEP 2024 – <span hidden="{{ enOff }}">TODAY</span><span hidden="{{ esOff }}">HOY</span></span>
+      </div>
+
+      <div style="display:flex;align-items:stretch;flex-wrap:wrap">
+        <div style="flex:1 1 280px;min-width:0;padding:26px 20px;animation:om-inL .9s cubic-bezier(.16,1,.3,1) .1s both">
+          <div style="height:4px;background:repeating-linear-gradient(90deg,#66D19A 0 14px,#16321F 14px 24px);background-size:24px 4px;animation:om-flow 1.4s linear infinite"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.22em;color:#66D19A;margin-top:16px">LANE 01 · <span hidden="{{ enOff }}">THE OPERATION</span><span hidden="{{ esOff }}">LA OPERACIÓN</span></div>
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:38px;font-weight:800;letter-spacing:-.04em;line-height:1;margin-top:10px">Cohino</div>
+          <div style="font-size:14px;color:#A8A49D;margin-top:10px;text-wrap:pretty">
+            <span hidden="{{ enOff }}">Commercial Lead &amp; Operations Manager. Eight-figure purchase volume, multi-origin → EU.</span><span hidden="{{ esOff }}">Responsable Comercial y Manager de Operaciones. Volumen de compra de ocho cifras, multiorigen → UE.</span>
+          </div>
+        </div>
+
+        <div style="flex:1 1 100%;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;border-top:1px solid #2A2F35;border-bottom:1px solid #2A2F35">
+          <div style="width:100%;height:2px;background:#3A4047;transform-origin:center;animation:om-grow 1s cubic-bezier(.16,1,.3,1) .7s both"></div>
+          <div style="position:absolute;width:14px;height:14px;border-radius:50%;background:#F2EEE7;animation:om-fade .5s ease 1.3s both"></div>
+          <div style="position:absolute;width:14px;height:14px;border-radius:50%;border:1.5px solid #F2EEE7;animation:om-pulse 2.6s ease-out infinite"></div>
+          <div style="position:absolute;right:20px;top:15px;padding-left:8px;background:#111418;font-family:'IBM Plex Mono',monospace;font-size:9px;font-weight:700;letter-spacing:.2em;color:#F2EEE7;animation:om-breathe 2.6s ease-in-out infinite"><span hidden="{{ enOff }}">TODAY</span><span hidden="{{ esOff }}">HOY</span></div>
+        </div>
+
+        <div style="flex:1 1 280px;min-width:0;padding:26px 20px;animation:om-inR .9s cubic-bezier(.16,1,.3,1) .24s both">
+          <div style="height:4px;background:repeating-linear-gradient(90deg,#DDAE62 0 14px,#33291A 14px 24px);background-size:24px 4px;animation:om-flow-rev 1.4s linear infinite"></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.22em;color:#DDAE62;margin-top:16px">LANE 02 · <span hidden="{{ enOff }}">IN PARALLEL</span><span hidden="{{ esOff }}">EN PARALELO</span></div>
+          <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:38px;font-weight:800;letter-spacing:-.04em;line-height:1;margin-top:10px;color:#A8A49D">AVANTIA</div>
+          <div style="font-size:14px;color:#A8A49D;margin-top:10px;text-wrap:pretty">
+            <span hidden="{{ enOff }}">Founder &amp; CEO of a three-person marketing and AI-automation agency for food service and aesthetics.</span><span hidden="{{ esOff }}">Fundador y CEO de una agencia de marketing y automatización con IA de tres personas para hostelería y estética.</span>
+          </div>
+        </div>
+      </div>
+
+      <sc-if value="{{ showOverlap }}" hint-placeholder-val="{{ true }}">
+      <div data-reveal style="border-top:1px solid #2A2F35;padding:22px 20px 24px">
+        <div style="display:grid;grid-template-columns:84px minmax(0,1fr);gap:12px 12px;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#8F8B84">
+          <span>2022 – 2023</span>
+          <div style="height:14px;background:#2A2F35;width:26%;transform-origin:left;animation:om-grow .9s cubic-bezier(.16,1,.3,1) .3s both"></div>
+          <span style="color:#66D19A">2024 – <span hidden="{{ enOff }}">now</span><span hidden="{{ esOff }}">hoy</span></span>
+          <div style="height:14px;width:62%;margin-left:38%;background:repeating-linear-gradient(90deg,#66D19A 0 14px,#16321F 14px 24px);background-size:24px 14px;transform-origin:left;animation:om-grow .9s cubic-bezier(.16,1,.3,1) .45s both,om-flow 1.4s linear infinite"></div>
+          <span style="color:#DDAE62">2026 – <span hidden="{{ enOff }}">now</span><span hidden="{{ esOff }}">hoy</span></span>
+          <div style="height:14px;width:22%;margin-left:78%;background:repeating-linear-gradient(90deg,#DDAE62 0 14px,#33291A 14px 24px);background-size:24px 14px;transform-origin:left;animation:om-grow .9s cubic-bezier(.16,1,.3,1) .6s both,om-flow 1.4s linear infinite"></div>
+        </div>
+        <div style="margin-top:16px;font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:#F2EEE7">
+          <span hidden="{{ enOff }}">Overlap: both roles held simultaneously since 2026</span><span hidden="{{ esOff }}">Solapamiento: ambos puestos en activo a la vez desde 2026</span>
+        </div>
+      </div>
+      </sc-if>
+    </div>
+
+    <div data-reveal style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:#2A2F35;margin-top:34px">
+      <div style="background:#111418;padding:26px 22px;display:flex;flex-direction:column">
+        <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8F8B84;margin-bottom:14px"><span hidden="{{ enOff }}">Annual purchase volume</span><span hidden="{{ esOff }}">Volumen de compra anual</span></span>
+        <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:54px;font-weight:800;letter-spacing:-.05em;line-height:.9;margin-top:auto;animation:om-clip .8s cubic-bezier(.16,1,.3,1) both"><span style="color:#66D19A">8</span>-figure</span>
+      </div>
+      <div style="background:#111418;padding:26px 22px;display:flex;flex-direction:column">
+        <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8F8B84;margin-bottom:14px"><span hidden="{{ enOff }}">Active suppliers · multiple origins</span><span hidden="{{ esOff }}">Proveedores activos · varios orígenes</span></span>
+        <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:54px;font-weight:800;letter-spacing:-.05em;line-height:.9;margin-top:auto;animation:om-clip .8s cubic-bezier(.16,1,.3,1) .12s both">15<span style="color:#66D19A">–</span>20</span>
+      </div>
+      <div style="background:#111418;padding:26px 22px;display:flex;flex-direction:column">
+        <span style="display:block;font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8F8B84;margin-bottom:14px"><span hidden="{{ enOff }}">Direct business growth contributed</span><span hidden="{{ esOff }}">Crecimiento directo del negocio aportado</span></span>
+        <span style="display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:54px;font-weight:800;letter-spacing:-.05em;line-height:.9;margin-top:auto;animation:om-clip .8s cubic-bezier(.16,1,.3,1) .24s both"><span style="color:#66D19A">+</span>20%</span>
+      </div>
+    </div>
+
+    <section data-reveal style="display:grid;grid-template-columns:minmax(0,1fr);row-gap:14px;gap:0 30px;padding:30px 0;border-bottom:1px solid #2A2F35">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.8;color:#8F8B84;letter-spacing:.08em;text-transform:uppercase">
+        <span style="display:block;color:#F2EEE7;font-weight:700;letter-spacing:.18em"><span hidden="{{ enOff }}">Profile</span><span hidden="{{ esOff }}">Perfil</span></span>
+      </div>
+      <div>
+        <p style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(22px,2.6vw,30px);font-weight:600;line-height:1.24;letter-spacing:-.02em;margin-bottom:18px;text-wrap:pretty">
+          <span hidden="{{ enOff }}">I run an eight-figure international import operation end to end: 15 to 20 suppliers across China, Ecuador and other origins, from the price negotiation to the product landing with the client.</span><span hidden="{{ esOff }}">Dirijo de principio a fin una operación de importación internacional de ocho cifras: 15 a 20 proveedores en China, Ecuador y otros orígenes, desde la negociación del precio hasta que el producto llega al cliente.</span>
+        </p>
+        <p style="font-size:14.6px;color:#A8A49D;margin-bottom:10px;text-wrap:pretty">
+          <span hidden="{{ enOff }}">More than two years across the full trade cycle: sourcing, negotiation, customs and EU import compliance, freight, quality control on arrival and the commercial management that follows. I answer for purchasing cost and client revenue at the same time, so I read an import operation by where its margin is actually made and lost, not by one function within the chain.</span><span hidden="{{ esOff }}">Más de dos años cubriendo el ciclo completo: compras, negociación, aduanas y cumplimiento de importación en la UE, transporte, control de calidad a la llegada y la gestión comercial posterior. Respondo a la vez del coste de compra y del ingreso de cliente, así que leo una operación de importación por dónde se gana y se pierde el margen, no por una función aislada de la cadena.</span>
+        </p>
+        <p style="margin-top:10px;font-size:14.6px;color:#A8A49D;margin-bottom:10px;text-wrap:pretty">
+          <span hidden="{{ enOff }}">In parallel, I founded and lead a marketing and AI-automation agency with a team of three, which keeps me directly involved in the commercial and digital side of business. Native Spanish, advanced professional English (C1) and German in progress; experienced in working across time zones, regulatory frameworks and business cultures.</span><span hidden="{{ esOff }}">En paralelo, he fundado y dirijo una agencia de marketing y automatización con IA con un equipo de tres personas, lo que me mantiene implicado de forma directa en la vertiente comercial y digital del negocio. Español nativo, inglés profesional avanzado (C1) y alemán en curso; con experiencia trabajando entre distintas zonas horarias, marcos regulatorios y culturas empresariales.</span>
+        </p>
+        <p style="font-size:14.6px;color:#A8A49D;text-wrap:pretty">
+          <span hidden="{{ enOff }}">Combining both roles is a deliberate choice. Running import operations of this kind has given me the judgement to negotiate, control costs and protect the margin at every link in the chain, from supplier to client. Building the agency from scratch has taught me to generate demand, understand how a business owner decides and turn that decision into sales. That dual perspective is my main advantage: I see the business as a whole and connect what it costs to deliver a product or service with what it takes to sell it, so every decision is made with the end client in mind.</span><span hidden="{{ esOff }}">Compaginar ambos roles es una decisión deliberada. Dirigir este tipo de operaciones de importación me ha dado criterio para negociar, controlar costes y proteger el margen en cada eslabón de la cadena, desde el proveedor hasta el cliente. Construir la agencia desde cero me ha enseñado a generar demanda, a entender cómo decide un empresario y a convertir esa decisión en ventas. Esa doble perspectiva es mi principal ventaja: tengo una visión completa del negocio y conecto lo que cuesta ofrecer un producto o servicio con lo que hace falta para venderlo, de modo que cada decisión la tomo pensando en el cliente final.</span>
+        </p>
+      </div>
+    </section>
+
+    <section data-reveal style="display:grid;grid-template-columns:minmax(0,1fr);row-gap:14px;gap:0 30px;padding:30px 0;border-bottom:1px solid #2A2F35;position:relative">
+      <div style="position:absolute;left:-14px;top:40px;bottom:40px;width:4px;background:repeating-linear-gradient(180deg,#66D19A 0 14px,#16321F 14px 24px)"></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.8;color:#8F8B84;letter-spacing:.08em;text-transform:uppercase">
+        <span style="display:block;color:#F2EEE7;font-weight:700;letter-spacing:.18em">Sep 2024 –</span>
+        <span hidden="{{ enOff }}">Present</span><span hidden="{{ esOff }}">Actualidad</span><br>Valencia, ES
+        <span style="display:inline-block;color:#66D19A;border:1px solid #66D19A;padding:2px 6px;margin-top:10px;font-size:9.5px;white-space:nowrap">LANE 01</span>
+      </div>
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(22px,2.4vw,28px);font-weight:700;letter-spacing:-.03em;line-height:1.14">
+          <span hidden="{{ enOff }}">Commercial Lead &amp; Operations Manager</span><span hidden="{{ esOff }}">Responsable Comercial y Manager de Operaciones</span>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#66D19A;margin-top:8px">Cohino</div>
+        <p style="margin-top:12px;font-size:14.6px;color:#A8A49D;text-wrap:pretty">
+          <span hidden="{{ enOff }}">Full ownership of the trade cycle for imported food products, from supplier negotiation in Asia and Latin America through to client delivery.</span><span hidden="{{ esOff }}">Responsabilidad completa del ciclo de comercio de productos alimentarios importados, desde la negociación con proveedores en Asia y Latinoamérica hasta la entrega al cliente.</span>
+        </p>
+
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#F2EEE7;margin:22px 0 10px;padding-bottom:6px;border-bottom:1px solid #2A2F35"><span hidden="{{ enOff }}">Sourcing &amp; purchasing</span><span hidden="{{ esOff }}">Compras y aprovisionamiento</span></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Accountable for an <strong style="color:#F2EEE7">eight-figure annual purchase volume</strong> across <strong style="color:#F2EEE7">15–20 active suppliers</strong> across China, Ecuador and other origins</span><span hidden="{{ esOff }}">Responsable de un <strong style="color:#F2EEE7">volumen de compra anual de ocho cifras</strong> con <strong style="color:#F2EEE7">15–20 proveedores activos</strong> en China, Ecuador y otros orígenes</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Negotiate pricing, terms and product specifications; run market and price analysis to inform buying decisions</span><span hidden="{{ esOff }}">Negociación de precios, condiciones y especificaciones de producto; análisis de mercado y de precios para las decisiones de compra</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Handle customs documentation and EU import compliance end to end</span><span hidden="{{ esOff }}">Gestión integral de documentación aduanera y cumplimiento de importación en la UE</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Coordinate freight, inspections and delivery timelines with forwarders and carriers</span><span hidden="{{ esOff }}">Coordinación de transporte, inspecciones y plazos de entrega con transitarios y navieras</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Contributed to <strong style="color:#F2EEE7">20% direct business growth</strong> through sourcing strategy and commercial decision-making</span><span hidden="{{ esOff }}">Contribución a un <strong style="color:#F2EEE7">20% de crecimiento directo del negocio</strong> mediante estrategia de compras y decisiones comerciales</span></li>
+        </ul>
+
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#F2EEE7;margin:22px 0 10px;padding-bottom:6px;border-bottom:1px solid #2A2F35"><span hidden="{{ enOff }}">Commercial</span><span hidden="{{ esOff }}">Comercial</span></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Manage a portfolio of <strong style="color:#F2EEE7">10 accounts</strong>, covering relationship management, order handling and repeat business</span><span hidden="{{ esOff }}">Gestión de una cartera de <strong style="color:#F2EEE7">10 cuentas</strong>: relación, pedidos y recompra</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}"><strong style="color:#F2EEE7">Market development:</strong> introducing new products into existing accounts, growing volume on the lines they already buy, and opening new accounts, including dormant ones, through direct outreach</span><span hidden="{{ esOff }}"><strong style="color:#F2EEE7">Desarrollo de mercado:</strong> introducir productos nuevos en las cuentas que ya tengo, aumentar el volumen en las líneas que ya compran y abrir clientes nuevos, dormidos incluidos, mediante prospección directa</span></li>
+          
+        </ul>
+
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#F2EEE7;margin:22px 0 10px;padding-bottom:6px;border-bottom:1px solid #2A2F35"><span hidden="{{ enOff }}">Quality, product &amp; marketing</span><span hidden="{{ esOff }}">Calidad, producto y marketing</span></div>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px">
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Quality control on incoming product against specification</span><span hidden="{{ esOff }}">Control de calidad del producto entrante frente a especificación</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}"><strong style="color:#F2EEE7">Own the whole marketing function</strong>: product packaging, catalogue, merchandising, business cards and every piece of commercial design: everything a client sees before the product itself</span><span hidden="{{ esOff }}"><strong style="color:#F2EEE7">Asumo toda la función de marketing</strong>: packaging de producto, catálogo, merchandising, tarjetas de visita y cualquier pieza de diseño comercial, todo lo que el cliente ve antes que el propio producto</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <sc-if value="{{ showParallel }}" hint-placeholder-val="{{ true }}">
+    <section data-reveal style="display:grid;grid-template-columns:minmax(0,1fr);row-gap:14px;gap:0 30px;padding:30px 0;border-bottom:1px solid #2A2F35;position:relative">
+      <div style="position:absolute;left:-14px;top:40px;bottom:40px;width:4px;background:repeating-linear-gradient(180deg,#DDAE62 0 14px,#33291A 14px 24px)"></div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.8;color:#8F8B84;letter-spacing:.08em;text-transform:uppercase">
+        <span style="display:block;color:#F2EEE7;font-weight:700;letter-spacing:.18em">2026 –</span>
+        <span hidden="{{ enOff }}">Present</span><span hidden="{{ esOff }}">Actualidad</span><br>Valencia, ES
+        <span style="display:inline-block;color:#DDAE62;border:1px solid #DDAE62;padding:2px 6px;margin-top:10px;font-size:9.5px;white-space:nowrap">LANE 02</span>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:#DDAE62;margin-bottom:10px"><span hidden="{{ enOff }}">Running in parallel</span><span hidden="{{ esOff }}">En paralelo</span></div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.16">
+          <span hidden="{{ enOff }}">Founder &amp; CEO</span><span hidden="{{ esOff }}">Fundador y CEO</span>
+        </div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#DDAE62;margin-top:8px">AVANTIA</div>
+        <p style="margin-top:12px;font-size:14px;color:#A8A49D;text-wrap:pretty">
+          <span hidden="{{ enOff }}">Marketing and AI-automation agency working mainly with restaurants and aesthetic clinics, and across the wider food-service and aesthetics sectors. Founder and CEO of a three-person team, responsible for the entire commercial function.</span><span hidden="{{ esOff }}">Agencia de marketing y automatización con IA que trabaja principalmente con restaurantes y clínicas estéticas, y con el resto de negocios de hostelería y estética. Fundador y CEO de un equipo de tres personas y responsable de toda la función comercial.</span>
+        </p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:12px">
+          <li style="position:relative;padding-left:20px;font-size:14px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#DDAE62"></span><span hidden="{{ enOff }}">Design and run the outbound process from zero: prospecting by WhatsApp, email and in-person visits, qualification, discovery call, proposal and close</span><span hidden="{{ esOff }}">Diseño y ejecuto el proceso outbound desde cero: prospección por WhatsApp, email y visita presencial, cualificación, llamada de descubrimiento, propuesta y cierre</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#DDAE62"></span><span hidden="{{ enOff }}"><strong style="color:#F2EEE7">Brand &amp; presence:</strong> own website and web development, social media management, visual rebranding, Google Business Profile, and optimisation to appear in AI assistant recommendations</span><span hidden="{{ esOff }}"><strong style="color:#F2EEE7">Marca y presencia:</strong> web propia y desarrollo web, gestión de redes, rebranding visual, Perfil de Empresa de Google y optimización para aparecer en recomendaciones de asistentes de IA</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#DDAE62"></span><span hidden="{{ enOff }}"><strong style="color:#F2EEE7">Acquisition &amp; automation:</strong> lead capture, Meta Ads, CRM workflows and automation of all kinds of processes</span><span hidden="{{ esOff }}"><strong style="color:#F2EEE7">Captación y automatización:</strong> captación de leads, Meta Ads, flujos de CRM y automatización de todo tipo de procesos</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#DDAE62"></span><span hidden="{{ enOff }}">Own commercial infrastructure: CRM with pipeline and revenue tracking, a landing page with real cases and self-hosted n8n automations</span><span hidden="{{ esOff }}">Infraestructura comercial propia: CRM con pipeline y seguimiento de ingresos, landing con casos reales y automatizaciones en n8n autoalojado</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#DDAE62"></span><span hidden="{{ enOff }}">Client outcomes include <strong style="color:#F2EEE7">2.1M Instagram views in the last 90 days for our latest client</strong>, measurable growth in bookings and a sustained increase in review volume and rating</span><span hidden="{{ esOff }}">Resultados de cliente: <strong style="color:#F2EEE7">2,1M de visualizaciones en Instagram en los últimos 90 días para nuestro último cliente</strong>, crecimiento medible de reservas y aumento sostenido del volumen y la nota de reseñas</span></li>
+        </ul>
+      </div>
+    </section>
+    </sc-if>
+
+    <section data-reveal style="display:grid;grid-template-columns:minmax(0,1fr);row-gap:14px;gap:0 30px;padding:30px 0;border-bottom:1px solid #2A2F35">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;line-height:1.8;color:#8F8B84;letter-spacing:.08em;text-transform:uppercase">
+        <span style="display:block;color:#F2EEE7;font-weight:700;letter-spacing:.18em">Nov 2022 –</span>Aug 2023<br>Spain
+      </div>
+      <div>
+        <div style="font-family:'Bricolage Grotesque',sans-serif;font-size:24px;font-weight:700;letter-spacing:-.03em;line-height:1.16"><span hidden="{{ enOff }}">Sales &amp; Marketing Intern</span><span hidden="{{ esOff }}">Becario de Ventas y Marketing</span></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#66D19A;margin-top:8px">ForwardKeys</div>
+        <p style="margin-top:12px;font-size:14.6px;color:#A8A49D;text-wrap:pretty"><span hidden="{{ enOff }}">Travel-intelligence data company selling to airlines, tourism boards and hospitality groups.</span><span hidden="{{ esOff }}">Empresa de datos de inteligencia de viajes que vende a aerolíneas, entes de turismo y grupos hoteleros.</span></p>
+        <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;margin-top:12px">
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Prospected and qualified leads for the sales team; maintained pipeline and records in the CRM</span><span hidden="{{ esOff }}">Prospección y cualificación de leads para el equipo de ventas; mantenimiento del pipeline y de los registros en el CRM</span></li>
+          <li style="position:relative;padding-left:20px;font-size:14.6px;color:#A8A49D"><span style="position:absolute;left:0;top:10px;width:9px;height:2px;background:#66D19A"></span><span hidden="{{ enOff }}">Delivered lead-generation campaigns and supported broader marketing activity across the commercial function</span><span hidden="{{ esOff }}">Ejecución de campañas de generación de leads y apoyo a la actividad de marketing en toda la función comercial</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section data-reveal style="display:grid;grid-template-columns:minmax(0,1fr);row-gap:14px;gap:0 30px;padding:30px 0;border-bottom:1px solid #2A2F35">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8F8B84;letter-spacing:.08em;text-transform:uppercase">
+        <span style="display:block;color:#F2EEE7;font-weight:700;letter-spacing:.18em"><span hidden="{{ enOff }}">Capabilities</span><span hidden="{{ esOff }}">Capacidades</span></span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#F2EEE7;margin-bottom:10px"><span hidden="{{ enOff }}">Trade &amp; Operations</span><span hidden="{{ esOff }}">Comercio y Operaciones</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:13px">
+            <span style="padding:5px 11px;background:#16321F;color:#66D19A;border:1px solid #2F5C40;font-weight:500">Import / Export</span>
+            <span style="padding:5px 11px;background:#16321F;color:#66D19A;border:1px solid #2F5C40;font-weight:500">Supplier Negotiation</span>
+            <span style="padding:5px 11px;background:#16321F;color:#66D19A;border:1px solid #2F5C40;font-weight:500">Customs Documentation</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Procurement &amp; Sourcing</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Incoterms</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Freight Coordination</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Quality Control</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Market &amp; Price Analysis</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#F2EEE7;margin-bottom:10px"><span hidden="{{ enOff }}">Commercial</span><span hidden="{{ esOff }}">Comercial</span></div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:13px">
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">B2B Sales</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Account Management</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Client Portfolio Ownership</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">CRM</span>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#F2EEE7;margin-bottom:10px">Digital</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;font-size:13px">
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Marketing Automation</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">Packaging &amp; Catalogue Design</span>
+            <span style="padding:5px 11px;background:#15181C;color:#A8A49D;border:1px solid #2A2F35">n8n / Make</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal style="display:grid;grid-template-columns:minmax(0,1fr);row-gap:14px;gap:0 30px;padding:30px 0;border-bottom:1px solid #2A2F35">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8F8B84;letter-spacing:.08em;text-transform:uppercase">
+        <span style="display:block;color:#F2EEE7;font-weight:700;letter-spacing:.18em"><span hidden="{{ enOff }}">Education</span><span hidden="{{ esOff }}">Formación</span></span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+          <div style="font-size:15px;font-weight:500;color:#F2EEE7"><span hidden="{{ enOff }}">Bachelor's Degree, International Business</span><span hidden="{{ esOff }}">Grado en Negocios Internacionales</span><span style="display:block;font-weight:400;color:#A8A49D;font-size:14px;margin-top:2px">ESIC Business &amp; Marketing School, Valencia</span></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8F8B84;white-space:nowrap">2019 – 2023</div>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px">
+          <div style="font-size:15px;font-weight:500;color:#F2EEE7"><span hidden="{{ enOff }}">Erasmus exchange</span><span hidden="{{ esOff }}">Intercambio Erasmus</span><span style="display:block;font-weight:400;color:#A8A49D;font-size:14px;margin-top:2px">Universität Augsburg, Germany</span></div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8F8B84;white-space:nowrap"><span hidden="{{ enOff }}">During degree</span><span hidden="{{ esOff }}">Durante el grado</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal style="display:grid;grid-template-columns:minmax(0,1fr);row-gap:14px;gap:0 30px;padding:40px 0">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8F8B84;letter-spacing:.08em;text-transform:uppercase">
+        <span style="display:block;color:#F2EEE7;font-weight:700;letter-spacing:.18em"><span hidden="{{ enOff }}">Languages</span><span hidden="{{ esOff }}">Idiomas</span></span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:15px">
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid #2A2F35;padding-bottom:8px"><span><span hidden="{{ enOff }}">Spanish</span><span hidden="{{ esOff }}">Español</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#66D19A;text-transform:uppercase;letter-spacing:.14em"><span hidden="{{ enOff }}">Native</span><span hidden="{{ esOff }}">Nativo</span></span></div>
+        <div style="display:flex;justify-content:space-between;border-bottom:1px solid #2A2F35;padding-bottom:8px"><span><span hidden="{{ enOff }}">English</span><span hidden="{{ esOff }}">Inglés</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#66D19A;text-transform:uppercase;letter-spacing:.14em"><span hidden="{{ enOff }}">Advanced professional · C1</span><span hidden="{{ esOff }}">Profesional avanzado · C1</span></span></div>
+        <div style="display:flex;justify-content:space-between"><span><span hidden="{{ enOff }}">German</span><span hidden="{{ esOff }}">Alemán</span></span><span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#8F8B84;text-transform:uppercase;letter-spacing:.14em"><span hidden="{{ enOff }}">Learning</span><span hidden="{{ esOff }}">En curso</span></span></div>
+      </div>
+    </section>
+
+    <div style="margin-top:20px;padding-top:18px;border-top:4px solid #66D19A;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#8F8B84;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap">
+      <span>Alejandro Brandez Aldaz</span>
+      <span><span hidden="{{ enOff }}">Available for relocation · EU citizen</span><span hidden="{{ esOff }}">Disponible para reubicación · Ciudadano UE</span></span>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1040},&quot;lang&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;en&quot;,&quot;es&quot;],&quot;default&quot;:&quot;en&quot;,&quot;tsType&quot;:&quot;'en' | 'es'&quot;,&quot;section&quot;:&quot;Idioma&quot;},&quot;showParallel&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;},&quot;showOverlap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Contenido&quot;}}">
+class Component extends DCLogic {
+  state = { lang: null };
+  get lang(){ return this.state.lang || this.props.lang || 'en'; }
+  btn(active){
+    return 'font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.16em;padding:5px 12px;cursor:pointer;border:1px solid ' +
+      (active ? '#66D19A' : '#2A2F35') + ';background:' + (active ? '#66D19A' : 'transparent') +
+      ';color:' + (active ? '#0B0C0E' : '#6F6C66');
+  }
+  renderVals(){
+    const es = this.lang === 'es';
+    return {
+      esOff: !es,
+      enOff: es,
+      btnEn: this.btn(!es),
+      btnEs: this.btn(es),
+      showParallel: this.props.showParallel ?? true,
+      showOverlap: this.props.showOverlap ?? true,
+      setEn: () => this.setState({ lang: 'en' }),
+      setEs: () => this.setState({ lang: 'es' })
+    };
+  }
+  componentDidMount(){
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if(!('IntersectionObserver' in window)) return;
+    const hide = el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.filter = 'blur(5px)';
+    };
+    const show = el => {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+      el.style.filter = 'none';
+    };
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    els.forEach(el => {
+      el.style.transition = 'opacity .65s ease, transform .75s cubic-bezier(.16,1,.3,1), filter .65s ease';
+      hide(el);
+    });
+    // re-triggers every time a block enters or leaves the viewport
+    const check = () => {
+      const h = window.innerHeight || 800;
+      els.forEach(el => {
+        const r = el.getBoundingClientRect();
+        (r.top < h * 0.94 && r.bottom > h * 0.04) ? show(el) : hide(el);
+      });
+      this._raf = null;
+    };
+    this._tick = () => { check(); };
+    document.addEventListener('scroll', this._tick, true);
+    window.addEventListener('resize', this._tick, { passive: true });
+    this._poll = setInterval(check, 250);
+    check();
+  }
+  componentWillUnmount(){
+    document.removeEventListener('scroll', this._tick, true);
+    window.removeEventListener('resize', this._tick);
+    clearInterval(this._poll);
+  }
+}
+
+</script>
+</body>
+</html>
